@@ -1,27 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-  <section class="order-form my-4 mx-4">
-    <div class="container pt-4">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-      <div class="row">
-        <div class="col-12">
-          <h1>Nuva Order Form</h1>
-      
-          <hr class="mt-1">
-        </div>
-        <div class="col-12">
+/* Style the header */
+header {
+ 
+  padding: 30px;
+  text-align: center;
+  font-size: 15px;
+  color: Black;
+}
 
-          <div class="row mx-4">
-            <div class="col-12 mb-2">
+
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Style the footer */
+Body {
+
+  padding: 10px;
+  text-align: center;
+  color: Black;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<header>
+  <h2>Nuva Product Order Form</h2>
+</header>
+
+
+<section> 
+              
               <label class="order-form-label">Name</label>
             </div>
-            <div class="col-12 col-sm-6">
+            
               <input class="order-form-input" placeholder="First">
-            </div>
-            <div class="col-12 col-sm-6 mt-2 mt-sm-0">
+
               <input class="order-form-input" placeholder="Last">
             </div>
           </div>
           
+</p>
+
+
+
+</section>   
       <div class="row mx-4">
             <div class="col-12 mb-2">
               <label class="order-form-label">Email</label>
@@ -30,7 +88,8 @@
               <input class="order-form-input" placeholder="e.g.. name@example.com">
             </div>
  					</div>
-          
+</p>
+   
                     <div class="row mt-3 mx-4">
             <div class="col-12">           
                 <label class="order-form-label">Business Name</label>
@@ -38,7 +97,7 @@
               <input class="order-form-input" placeholder="gym name">
             </div>
           </div>
-          
+</p>          
           <div class="row mt-3 mx-4">
             <div class="col-12">
               <label for ="order-form-label">Select Type of Antibacterial Wipes</label>
@@ -47,7 +106,8 @@
   <option value="4 Rolls x 1200 Wipes (Carton)">4 Rolls x 1200 Wipes (Carton)</option>
     <option value="Refill 1200 Wipes (Single Roll)">Refill 1200 Wipes (Single Roll)</option> 
 </select>
-                    <div class="row mt-3 mx-4">
+</p>
+<div class="row mt-3 mx-4">
             <div class="col-12">           
                 <label class="order-form-label">Qty</label>
                 </div>
@@ -55,7 +115,7 @@
             </div>
           </div>  
 
-          
+</p>        
           <div class="row mt-3 mx-4">
             <div class="col-12">
               <label class="order-form-label">Delivery Address</label>
@@ -79,7 +139,7 @@
               <input class="order-form-input" placeholder="Country">
             </div>
           </div>
-
+</p>
           <div class="row mt-3 mx-4">
             <div class="col-12">
               <div class="form-check">
@@ -91,6 +151,7 @@
 
           <div class="row mt-3">
             <div class="col-12">
+</p>
               <button type="button" id="btnSubmit" class="btn btn-dark d-block mx-auto btn-submit">Submit</button>
             </div>
           </div>
@@ -98,4 +159,19 @@
         </div>
       </div>
     </div>
-  </section>
+
+
+  <article>
+</p>
+  </article>
+
+
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+
