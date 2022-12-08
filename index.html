@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>CSS Template</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ <!DOCTYPE html>
 <style>
 * {
   box-sizing: border-box;
@@ -21,8 +17,6 @@ header {
   font-size: 15px;
   color: Black;
 }
-
-
 
 /* Clear floats after the columns */
 section::after {
@@ -55,8 +49,6 @@ Body {
   }
 }
 </style>
-</head>
-<body>
 
 
 <header>
@@ -64,111 +56,47 @@ Body {
  
   <h2>Nuva Product Order Form</h2>
 </header>
+ 
+ <form method="post" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
+
+<label for ="Full Name">Full Name</label>
+              <input type="text" placeholder="Enter Full Name" name ="data[Full Name]" required>
+        </div>  
+        </p>
+ <label for ="Email">Email</label>
+              <input type="text" placeholder="e.g.. name@example.com" name ="data[Email]" required>
+     </div> 
+     </p>   
+<label for ="Business Name">Business Name</label>
+              <input type="text" placeholder="Enter Business Name" name ="data[Business Name]" required>
+     </div> 
+     </p> 
+    <button type="submit">Submit</button>
+</form>
 
 
-<section> 
-              
-              <label class="order-form-label">Name</label>
-            </div>
-            
-              <input class="order-form-input" placeholder="First">
 
-              <input class="order-form-input" placeholder="Last">
-            </div>
-          </div>
-          
-<p>
-<aside>
-<p>
-              <label class="order-form-label">Email</label>          
-              <input class="order-form-input" placeholder="e.g.. name@example.com">
 
-          <aside>
-          
-                <label class="order-form-label">Business Name</label>
-                </div>
-              <input class="order-form-input" placeholder="gym name">
-            </div>
-          </div>
-</p>          
-          <div class="row mt-3 mx-4">
-            <div class="col-12">
-              <label for ="order-form-label">Select Type of Antibacterial Wipes</label>
-              </div>
-              <select name="order-form-label" id="order-form-label">
-  <option value="4 Rolls x 1200 Wipes (Carton)">4 Rolls x 1200 Wipes (Carton)</option>
-    <option value="Refill 1200 Wipes (Single Roll)">Refill 1200 Wipes (Single Roll)</option> 
-</select>
+<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      alert('success')
+      //window.location.href = 'https://yourwebsite.com/thank-you';
+    });
+  });
+</script>
+
 </p>
-<div class="row mt-1 mx-4">
-            <div class="col-12">           
-                <label class="order-form-label">Qty</label>
-                </div>
-              <input class="order-form-input" placeholder="Enter Qty">
-            </div>
-          </div>  
-
-</p>        
-<div class="row mt-3 mx-4">
-            <div class="col-12"> 
-              <label class="order-form-label">Delivery Address</label>
-            </div>
-           
-              <input class="order-form-input" placeholder="House number and street name">
-           
-            
-              <input class="order-form-input" placeholder="Apartment,unit, etc. (optional)">
-</p>         
-            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
-              <input class="order-form-input" placeholder="Suburb">
-          
-            <class="col-12 col-sm-6 mt-2 pl-sm-0">
-              <select name="State" id="State">
-  <option value="Victoria">Victoria</option>
-    <option value="New South Wales">New South Wales</option> 
-    <option value="Northern Territory">Northern Territory</option> 
-    <option value="Queensland">Queensland</option> 
-</select>
-            
- </p>          
-            <div class="col-12 col-sm-6 mt-2 pr-sm-2">
-              <input class="order-form-input" placeholder="Postcode">
-
-            </div>
-          </div>
-</p>
-          <div class="row mt-3 mx-4">
-            <div class="col-12">
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="validation" id="validation" value="1">
-                <label for="validation" class="form-check-label">I have read and agreed with the terms & conditions</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mt-3">
-            <div class="col-12">
-</p>
-              <button type="button" id="btnSubmit" class="btn btn-dark d-block mx-auto btn-submit">Place Order</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-
-  <article>
-</p>
-  </article>
-
-
-</section>
 
 <footer>
   <p>©2021 by Nuva</p>
 </footer>
-
-</body>
-</html>
-
