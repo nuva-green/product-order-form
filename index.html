@@ -1,8 +1,9 @@
-  <!DOCTYPE html>
-  
+ <!DOCTYPE html>
+<html>
+<head>
 <html lang="en">
 <head>
-<title>CSS Template</title>
+<title>Nuva Order Form</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -10,95 +11,190 @@
 
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
 }
 
-/* Style the header */
-header {
- 
-  padding: 30px;
-  text-align: center;
-  font-size: 15px;
-  color: Black;
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+input[type=number] {
+  width: 35%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 
 
+label {
+  margin-bottom: 10px;
+  display: block;
+}
 
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
+Select {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
   color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
 }
 
-/* Style the body */
-Body {
-
-  padding: 10px;
-  text-align: center;
-  color: Black;
+.btn:hover {
+  background-color: #45a049;
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
   }
 }
 </style>
-
+</head>
 
 <header>
   <img src="icon.png" alt="nuvaicon" width="100" height="100">
- 
   <h2>Nuva Product Order Form</h2>
 </header>
- 
- <form method="post" id="sheetdb-form"
-  action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
 
-<label for ="Customer First Name:">*First Name</label>
-              <input type="text" placeholder="Fist Name" name ="data[Customer First Name]" required>
-       
-        </p>
-
-<label for ="Customer Last Name:">*Last Name</label>
-              <input type="text" placeholder="Last Name" name ="data[Customer Last Name]" required>
-       
-        </p>
-
- <label for ="Email Address">*Email</label>
-              <input type="text" placeholder="e.g.. name@example.com" name ="data[Email Address]" required>
-     </div> 
-     </p>   
-<label for ="Business Name">*Business Name:</label>
-              <input type="text" placeholder="Enter Business Name" name ="data[Business Name]" required>
-     </div> 
-     </p> 
+    <div class="container">
+            <h4>Product Order </h4>
+         
+          <div class="col-50">
 
 
-<label for ="Type of Product">*Select Type of Antibacterial Wipes</label>
-              <select name="data[Type of Product]">
+
+ <label for ="Type of Product">Select Type of Antibacterial Wipes*</label>
+              <select name="data[Type of Product]" required>
   <option value="4 Rolls x 1200 Wipes (Carton)">4 Rolls x 1200 Wipes (Carton)</option>
     <option value="Refill 1200 Wipes (Single Roll)">Refill 1200 Wipes (Single Roll)</option> 
 </select>
-</p>
 
-
-<label for ="Qty">*Qty:</label>
-              <input type="number" placeholder="Qty" name ="data[Qty]" required>
+     </p>
+    
+<label for ="Qty">Qty*</label>
+              <input type="number" placeholder="Enter Qty" name ="data[Qty]" required>
      </div> 
      </p> 
+    </div>
+  </div>
+  </P>
+<body>
 
- <label for ="Delivery Address">*Delivery Street Address:</label>
-              <input type="text" placeholder="Unit / House number & street name" name ="data[Delivery Address]" required>
-     </div> 
-     </p>  
+<div class="row">
+  <div class="col-75">
+    <div class="container">
 
+      <form method="post" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
+     
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Delivery Address</h3>
+            
+<label for ="Customer First Name:">First Name*</label>
+              <input type="text" placeholder="First Name" name ="data[Customer First Name]" required>
+              </p>
 
-<label for ="State">*State</label>
+<label for ="Customer Last Name:">Last Name*</label>
+              <input type="text" placeholder="Last Name" name ="data[Customer Last Name]" required>
+               </p>
+
+ <label for ="Email Address">Email*</label>
+              <input type="text" placeholder="e.g.. name@example.com" name ="data[Email Address]" required>
+               </p>
+
+<label for ="Business Name">Business Name*</label>
+              <input type="text" placeholder="Enter Business Name" name ="data[Business Name]" required>
+              </p> 
+
+ <label for ="Delivery Address">Delivery Street Address*</label>
+              <input type="text" placeholder="Unit / House Number & Street Name" name ="data[Delivery Address]" required>
+              </p>  
+
+<label for ="State">State*</label>
               <select name="data[State]">
   <option value="Victoria">Victoria</option>
     <option value="New South Wales">New South Wales</option>
@@ -108,59 +204,28 @@ Body {
     <option value="Tasmania">Tasmania</option> 
     <option value="Western Australia">Western Australia</option> 
     <option value="Northern Territory">Northern Territory</option> 
-</select>
-</p>
+                </select>
+               </p>
 
- <label for ="Suburb">*Suburb:</label>
+ <label for ="Suburb">Suburb*</label>
               <input type="text" placeholder="" name ="data[Suburb]" required>
-     </div> 
-     </p>    
-
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" name="validation" id="validation" value="1" required>
-                <label for="validation" class="form-check-label">I have read and agreed with the terms & conditions</label>
-              </div> 
-              </p>
-<button type="submit">Submit</button>   
-
-     </p>  
-</form>
-
-<script>
-function myFunction() {
-  document.getElementById("form").reset();
-}
-</script>
-
-
-<script>
-  var form = document.getElementById('sheetdb-form');
-  form.addEventListener("submit", e => {
-    e.preventDefault();
-    fetch(form.action, {
-        method : "POST",
-        body: new FormData(document.getElementById("sheetdb-form")),
-    }).then(
-        response => response.json()
-    ).then((html) => {
-      // you can put any JS code here
-      alert('Thank you for shopping with Nuva')
-
-      //window.location.href = 'https://yourwebsite.com/thank-you';
-    });
-  });
-
-//function myFunction() {
-  //document.getElementById("form").reset();
-//}
-
-  
-</script>
+     </p>
 
 
 
-</p>
+        </P>
+        <label>
 
-<footer>
-  <p>©2021 by Nuva</p>
-</footer>
+          
+          <input type="checkbox" checked="checked" name="validation"> I have read and agreed with the terms & conditions
+        </label>
+        <input type="submit" value="Submit Order" class="btn">
+      </form>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+</body>
+</html>
