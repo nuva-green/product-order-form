@@ -1,15 +1,13 @@
   <!DOCTYPE html>
   
- <html lang="en">
+<html lang="en">
 <head>
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -24,12 +22,7 @@ header {
   color: Black;
 }
 
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 
 /* Style the footer */
 footer {
@@ -39,7 +32,7 @@ footer {
   color: white;
 }
 
-/* Style the footer */
+/* Style the body */
 Body {
 
   padding: 10px;
@@ -66,11 +59,17 @@ Body {
  <form method="post" id="sheetdb-form"
   action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
 
-<label for ="Full Name:">*Full Name</label>
-              <input type="text" placeholder="Enter Full Name" name ="data[Full Name]" required>
-        </div>  
+<label for ="First Name:">*First Name</label>
+              <input type="text" placeholder="Fist Name" name ="data[First Name]" required>
+       
         </p>
- <label for ="Email">*Email:</label>
+
+<label for ="Last Name:">*Last Name</label>
+              <input type="text" placeholder="Last Name" name ="data[Last Name]" required>
+       
+        </p>
+
+ <label for ="Email">*Email</label>
               <input type="text" placeholder="e.g.. name@example.com" name ="data[Email]" required>
      </div> 
      </p>   
@@ -78,10 +77,60 @@ Body {
               <input type="text" placeholder="Enter Business Name" name ="data[Business Name]" required>
      </div> 
      </p> 
-    <button type="submit">Submit</button>
+
+
+<label for ="Product Type">*Select Type of Antibacterial Wipes</label>
+              <select name="data[Product Type]">
+  <option value="4 Rolls x 1200 Wipes (Carton)">4 Rolls x 1200 Wipes (Carton)</option>
+    <option value="Refill 1200 Wipes (Single Roll)">Refill 1200 Wipes (Single Roll)</option> 
+</select>
+</p>
+
+
+<label for ="Qty">*Qty:</label>
+              <input type="number" placeholder="Qty" name ="data[Qty]" required>
+     </div> 
+     </p> 
+
+ <label for ="Street address">*Street address:</label>
+              <input type="text" placeholder="Unit / House number & street name" name ="data[Street address]" required>
+     </div> 
+     </p>  
+
+
+<label for ="State">*State</label>
+              <select name="data[State]">
+  <option value="Victoria">Victoria</option>
+    <option value="New South Wales">New South Wales</option>
+    <option value="Australian Capital Territory">Australian Capital Territory</option>  
+    <option value="Queensland">Queensland</option> 
+    <option value="South Australia">South Australia</option> 
+    <option value="Tasmania">Tasmania</option> 
+    <option value="Western Australia">Western Australia</option> 
+    <option value="Northern Territory">Northern Territory</option> 
+</select>
+</p>
+
+ <label for ="Suburb">*Suburb:</label>
+              <input type="text" placeholder="" name ="data[Suburb]" required>
+     </div> 
+     </p>    
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" name="validation" id="validation" value="1" required>
+                <label for="validation" class="form-check-label">I have read and agreed with the terms & conditions</label>
+              </div> 
+              </p>
+<button type="submit">Submit</button>   
+
+     </p>  
 </form>
 
-
+<script>
+function myFunction() {
+  document.getElementById("form").reset();
+}
+</script>
 
 
 <script>
@@ -96,10 +145,19 @@ Body {
     ).then((html) => {
       // you can put any JS code here
       alert('Thank you for shopping with Nuva')
+
       //window.location.href = 'https://yourwebsite.com/thank-you';
     });
   });
+
+//function myFunction() {
+  //document.getElementById("form").reset();
+//}
+
+  
 </script>
+
+
 
 </p>
 
