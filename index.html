@@ -72,13 +72,20 @@ input[type=number] {
   border-radius: 3px;
 }
 
+submit[type=submit] {
+  width: 15%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
 
 label {
   margin-bottom: 10px;
   display: block;
 }
 
-Select {
+select {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -91,6 +98,7 @@ Select {
   padding: 7px 0;
   font-size: 24px;
 }
+
 
 .btn {
   background-color: #04AA6D;
@@ -116,10 +124,7 @@ hr {
   border: 1px solid lightgrey;
 }
 
-span.price {
-  float: right;
-  color: grey;
-}
+
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
@@ -143,7 +148,8 @@ span.price {
          
           <div class="col-50">
 
-
+      <form method="post" id="sheetdb-form"
+  action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
 
  <label for ="Type of Product">Select Type of Antibacterial Wipes*</label>
               <select name="data[Type of Product]" required>
@@ -166,8 +172,7 @@ span.price {
   <div class="col-75">
     <div class="container">
 
-      <form method="post" id="sheetdb-form"
-  action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
+
      
       
         <div class="row">
@@ -219,6 +224,7 @@ span.price {
           
           <input type="checkbox" checked="checked" name="validation"> I have read and agreed with the terms & conditions
         </label>
+        
         <input type="submit" value="Submit Order" class="btn">
       </form>
 
@@ -241,8 +247,7 @@ span.price {
     </div>
   </div>
 
-  </div>
-</div>
-
 </body>
+
+</footer>
 </html>
