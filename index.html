@@ -2,7 +2,7 @@
 <html>
 <head>
 <html lang="en">
-
+<script type=’text/javascript’ src=’config.js’></script>
 <head>
 <title>Nuva Order Form</title>
  <link rel="icon" href="icon.png" type="images/x-icon"
@@ -163,8 +163,10 @@ hr {
           <div class="col-50">
               <h3>Product Order </h3>
 
+           //action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
       <form method="post" id="sheetdb-form"
-  action="https://sheetdb.io/api/v1/sz36fcvcf58yz">
+           action="https://sheetdb.io/api/v1/"> + mykey
+  
 
  <label for ="Type of Product">Select Type of Antibacterial Wipes*</label>
               <select name="data[Type of Product]" required>
