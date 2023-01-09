@@ -1,171 +1,23 @@
  <!DOCTYPE html>
 <html>
-<head>
-<html lang="en">
-<head>
-<title>Nuva Order Form</title>
- <link rel="icon" href="img/icon.png" type="images/x-icon"
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-<style>
-
-
-body {
-  font-family: Arial;
-  font-size: 17px;
-  padding-left: 12%;
-  padding-right: 12%
-}
-
-* {
-  box-sizing: border-box;
-}
-
-footer {
-  text-align: center;
-  font-family: Arial;
-  font-size: 12px;
-  padding: 3px;
-  background-color: Black;
-  color: white;
-}
-
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-.col-25 {
-  -ms-flex: 25%; /* IE10 */
-  flex: 25%;
-}
-
-.col-50 {
-  -ms-flex: 50%; /* IE10 */
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-.container {
-  background-color: #f2f2f2;
-  padding: 5px 20px 15px 20px;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-}
-
-input[type=text] {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-input[type=number] {
-  width: 10%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-submit[type=submit] {
-  width: 15%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-select {
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
-
-
-.btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
-}
-
-.btn:hover {
-  background-color: #45a049;
-}
-
-a {
-  color: #2196F3;
-}
-
-hr {
-  border: 1px solid lightgrey;
-}
-
-
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .row {
-    flex-direction: column-reverse;
-  }
-  .col-25 {
-    margin-bottom: 20px;
-  }
-}
-</style>
-</head>
-
-<header>
-  <img src="img/icon.png" alt="nuvaicon" width="100" height="100" >
-  <h2>Nuva Product Order Form</h2>
-</header>
-<div class="row">
-  <div class="col-75">
-    <div class="container">    
-        <div class="row">
-          <div class="col-50">
-              <h3>Product Order </h3>
-
-      <form method="post" id="sheetdb-form"
+  <head>
+    <meta charset="utf-8" />
+   <title>Nuva Order Form</title>
+    <link rel="icon" href="img/icon.png" type="images/x-icon"
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+            <form method="post" id="sheetdb-form"
            action= "https://sheetdb.io/api/v1/sz36fcvcf58yz" 
-  
- 
+
+    <div class="container">
+      <h1 class="form-title">Nuva Product Order Form</h1>
+      <form action="#">
+        <div class="main-user-info">
+
+          <div class="user-input-box">
  <label for ="Type of Product">Select Type of Antibacterial Wipes*</label>
       </p> 
               <select name="data[Type of Product]" required>
@@ -173,107 +25,63 @@ hr {
     <option value="Refill 1200 Wipes (Single Roll)">Refill 1200 Wipes (Single Roll)</option> 
 </select>
 
-
-<label for ="Qty">Qty*</label>
+          </div>
+          <div class="user-input-QTY-box input">
+              <label for ="Qty">Qty*</label></p>
               <input type="number" placeholder="Enter Qty" name ="data[Qty]" required>
-     </div> 
-     </p> 
-    </div>
-  </div>
-  </P>
-<body>
-
-<div class="row">
-  <div class="col-75">
-    <div class="container">    
-        <div class="row">
-          <div class="col-50">
-            <h3>Delivery Address</h3>
-
-    <div style="width: 100%;">
-        <div style="width: 50%; height: 100px; float: left; "> 
-           <label for ="Customer First Name:">First Name*</label> </p>
+ 
+          </div>
+          <div class="user-input-box">
+              <label for ="Customer First Name:">First Name*</label> </p>
              <input type="text" placeholder="First Name" name ="data[Customer First Name]" required>
-              </p>
 
-
-        </div>
-        <div style="margin-left: 50%; height: 100px; "> 
+          </div>
+          <div class="user-input-box">
             <label for ="Customer Last Name:">Last Name*</label> </p>
               <input type="text" placeholder="Last Name" name ="data[Customer Last Name]" required>
-               </p>
-        </div>
-    </div>
+          </div>
 
-
-
-    <div style="width: 100%;">
-        <div style="width: 50%; height: 100px; float: left; "> 
- <label for ="Email Address">Email*</label>
+        <div class="user-input-box">
+             <label for ="Email Address">Email*</label>
               <input type="text" placeholder="e.g.. name@example.com" name ="data[Email Address]" required>
-               </p>
-        </div>
-        <div style="margin-left: 50%; height: 100px; "> 
-<label for ="Business Name">Business Name*</label>
+          </div>
+
+        <div class="user-input-box">
+            <label for ="Business Name">Business Name*</label>
               <input type="text" placeholder="Enter Business Name" name ="data[Business Name]" required>
-              </p> 
-        </div>
-    </div>
+          </div>
 
+        <div class="user-input-box">
+            <label for ="Street Address">Street Address*</label>
+              <input type="text" placeholder="Unit/House Number & Street Name" name ="data[Street Address]" required>
+          </div>
 
-    <div style="width: 100%;">
-        <div style="width: 50%; height: 100px; float: left; "> 
- <label for ="Street Address">Street Address*</label>
-              <input type="text" placeholder="Unit / House Number & Street Name" name ="data[Street Address]" required>
-              </p> 
-              </p>
-        </div>
-        <div style="margin-left: 50%; height: 100px; "> 
- <label for ="Suburb">Suburb*</label>
+        <div class="user-input-box">
+             <label for ="Suburb">Suburb*</label>
               <input type="text" placeholder="" name ="data[Suburb]" required>
+          </div>
 
-        <div style="width: 50%; height: 100px; float: left; "> 
-
-
-<label for ="Postcode">Postcode*</label>
+        <div class="user-input-box">
+            <label for ="Postcode">Postcode*</label>
               <input type="text" placeholder="" name ="data[Postcode]" required>
-              </p>
-        </div>
-        <div style="margin-left: 50%; height: 100px; "> 
+          </div>
 
-               </p>
-        </div>
-    </div>
-               </p>
-        </div>
-    </div>
-
-     </p>
-
+        <div class="user-input-box">
+            <label for ="State">State*</label>
+              <input type="text" placeholder="" name ="data[State]" required>
+          </div>
 
         </div>
-    </div>
-        
-        </P>
-        <label>
-
-           <div style="width: 40%; height: 100px; float: right; ">      
-          <input type="checkbox" checked="checked" name="validation"> I have read and agreed with the terms & conditions
+         <input type="checkbox" checked="checked" name="validation"> I have read and agreed with the terms & conditions
         </label>
-          <div style="width: 30%; height: 100px; float: right; ">    
+   
+        <div class="form-submit-btn">
+          <input type="submit" value="Submit Order">
+          </div>
+            <p>©Nuva 2021
+     <a href="mailto:info@nuvagreen.com.au">Email Us</a>
 
-
-        <input type="submit" value="Submit Order" class="btn">
-      </form>
-              </p>
-        </div>
-    </div>
-               </p>
-        </div>
-    </div>
-
-     </p>
-      <script>
+                <script>
   var form = document.getElementById('sheetdb-form');
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -288,17 +96,11 @@ hr {
     });
   });
 </script>
-
+        </div>
+      </form>
     </div>
-  </div>
-</body>
-
-<footer>
- 
-  <p>©Nuva 2021
-     <a href="mailto:info@nuvagreen.com.au">Email Us</a>
   
-</footer>
+
+  </body>
 
 </html>
-
