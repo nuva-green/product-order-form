@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
 
@@ -89,7 +89,7 @@
                                  
           </div>       
           <div class="form-submit-btn ; ">
-         <input type="submit" value="Submit Order">         
+         <input type="submit" value="Submit Order" onclick="document.getElementById('myInput').value = ''">         
           </div>
           </div>
             <center> <text>©Nuva 2021
@@ -108,6 +108,7 @@
     ).then((html) => {
       // you can put any JS code here
       alert('Thank you for your order!')
+      document.contact-form.reset();
     });
   });
 </script>
