@@ -140,7 +140,5 @@ body{
         overflow: auto;
     }
 
-    .main-user-info::-webkit-scrollbar{
-        width: 0;
-    }
+
 }
